@@ -2795,11 +2795,6 @@ static void pollSIMState (void *param)
     ATResponse *p_response;
     int ret;
 
-    if (sState != RADIO_STATE_SIM_NOT_READY) {
-        // no longer valid to poll
-        return;
-    }
-
     switch(getSIMStatus()) {
         case SIM_ABSENT:
         case SIM_PIN:
